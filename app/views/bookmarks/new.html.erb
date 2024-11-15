@@ -1,0 +1,9 @@
+<div class="container-sm mt-5 bg-secondary-subtle rounded-3 shadow-sm">
+  <div class="m-3 p-3">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit "Add bookmark", class: "btn btn-primary btn-sm" %>
+  <% end %>
+  </div>
+</div>

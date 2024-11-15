@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchListV2</title>
+    <title>RailsWatchList</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg bg-dark text-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="<%= asset_path('logo_camera.png') %>" alt="Logo" class="d-inline-block align-top" style="width: 40px; height: 40px; object-fit: cover;">
+        </a>
+        <h2 class="ms-3 mb-0">
+          <%= link_to "Cool app name", root_path, class: "text-decoration-none text-white" %>
+        </h2>
+        <%= link_to "New list", new_list_path, class: "btn btn-primary ms-3" %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

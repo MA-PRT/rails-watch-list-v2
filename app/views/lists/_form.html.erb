@@ -1,0 +1,8 @@
+<div class="container-sm mt-5 bg-secondary-subtle rounded-3 shadow-sm">
+  <div class="m-3 p-3">
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, wrapper_html: { class: 'text-primary' } %>
+    <%= f.submit "Create List", class: "btn btn-primary btn-lg" %>
+  <% end %>
+  </div>
+</div>
